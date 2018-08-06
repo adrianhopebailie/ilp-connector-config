@@ -90,4 +90,4 @@ if (!fs.existsSync(connectorApp.script)) {
   throw new Error(`Couldn't find ilp-connector start script at ${module.exports.apps[0].script}`)
 }
 
-module.exports = { apps: [ connectorApp ] }
+module.exports = connectorApp
