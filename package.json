@@ -1,6 +1,6 @@
 {
   "name": "ilp-connector-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tools for managing and configuring ilp-connector",
   "bin": {
     "ilp-connector-config": "./bin/ilp-connector-config.sh"
