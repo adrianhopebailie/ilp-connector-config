@@ -110,6 +110,10 @@ else
         ;;
 
         create)
+            if [ $EUID != 0 ]; then
+            echo "This script requires root priveleges as it will create new folders in /etc. Please run with sudo."
+            exit 1;
+            fi
 
             if [ ! -d "$_ilp_connector_config" ] && [ ! -f "$_ecosystem_file" ]; then
               _config_skel="$(_config_skel_dir)"
@@ -118,7 +122,14 @@ else
               cp -r $_config_skel $_ilp_connector_config
               echo "Copying $_ecosystem_file_template to $_ecosystem_file"
               cp $_ecosystem_file_template $_ecosystem_file
+              echo
               echo "Manage config in $_ilp_connector_config and run with 'ilp-connector-config restart'"
+              echo
+              if [ ! -f "/srv/ilp-connector/src/index.js" ]; then
+                echo "WARNING: This config expects to find 'ilp-connector' installed in /srv/ilp-connector"
+                echo "Run 'npm install ilp-connector' inside that directory to install."
+                echo
+              fi
             else
               echo "Error: $_ilp_connector_config or $_ecosystem_file already exists.";
               exit 1;
