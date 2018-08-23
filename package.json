@@ -2,7 +2,6 @@
   "name": "ilp-connector-config",
   "version": "1.0.0",
   "description": "Tools for managing and configuring ilp-connector",
-  "main": "index.js",
   "bin": {
     "ilp-connector-clean-channels": "./bin/clean-channels.js",
     "ilp-connector-config": "./bin/ilp-connector-config.sh"
