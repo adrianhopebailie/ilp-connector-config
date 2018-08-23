@@ -1,0 +1,29 @@
+{
+  "name": "ilp-connector-config",
+  "version": "1.0.0",
+  "description": "Tools for managing and configuring ilp-connector",
+  "main": "index.js",
+  "bin": {
+    "ilp-connector-clean-channels": "./bin/clean-channels.js",
+    "ilp-connector-config": "./bin/ilp-connector-config.sh"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianhopebailie/ilp-connector-config.git"
+  },
+  "keywords": [
+    "ilp",
+    "interledger",
+    "ilp-connector"
+  ],
+  "author": "Adrian Hope-Bailie",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/adrianhopebailie/ilp-connector-config/issues"
+  },
+  "homepage": "https://github.com/adrianhopebailie/ilp-connector-config#readme",
+  "dependencies": {
+    "ripple-lib": "^1.0.0-beta.5"
+  }
+}
